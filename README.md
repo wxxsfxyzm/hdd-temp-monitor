@@ -107,6 +107,12 @@ Inside the VM, it uses a script to read the disk temperature calculate the disk'
 
    This indicates that the temperature sensor is working correctly.
 
+10. Configure the module to load at boot:
+
+    ```bash
+    echo "virt-temp" | sudo tee /etc/modules-load.d/virt-temp.conf
+    ```
+
 #### VM Configuration (Unraid, Ubuntu, etc.)
 
 1. Ensure that the VM has necessary permissions to access the disk controller and temperature sensors.
